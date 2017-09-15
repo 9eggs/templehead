@@ -1,0 +1,5 @@
+<a{{#href}} href="{{{href}}}"{{/href}}
+    {{#newWindow}} target="_blank"{{/newWindow}}
+    {{^href}}{{#tabindex}} tabindex="{{tabindex}}"{{/tabindex}}{{/href}}>
+    {{{anchor}}}s{{#newWindow}}<span class="visually-hidden"> (opens in a new window)</span>{{/newWindow}}
+</a>
