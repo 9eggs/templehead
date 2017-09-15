@@ -1,0 +1,13 @@
+<textarea name="{{textareaName}}"
+    {{#textareaId}} id="{{textareaId}}"{{/textareaId}}
+    {{#placeholderText}} placeholder="{{placeholderText}}"{{/placeholderText}}
+    {{#disabled}} disabled{{/disabled}}
+    {{#readOnly}} aria-readonly="true" readonly="true"{{/readOnly}}
+    {{#maxlength}} maxlength="{{maxlength}}"{{/maxlength}}
+    {{#minlength}} minlength="{{minlength}}"{{/minlength}}
+    {{^optional}} aria-required="true"{{/optional}}
+    {{#autocorrect}} autocorrect="on"{{/autocorrect}}"
+    {{#autoCapitalize}} autocapitalize="{{autoCapitalize}}"{{/autoCapitalize}}
+    {{#disableAutoComplete}} autocomplete="off"{{/disableAutoComplete}}>
+    {{textarea}}
+</textarea>
