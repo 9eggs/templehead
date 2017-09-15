@@ -1,0 +1,10 @@
+<select
+    {{#selectName}} name="{{selectName}}"{{/selectName}}
+    {{#selectId}} id="{{selectId}}"{{/selectId}}
+    {{#described}} aria-describedby="{{selectName}}-describer"{{/described}}
+    {{#disabled}} disabled aria-disabled="true"{{/disabled}}
+    {{^optional}} aria-required="true" required="required"{{/optional}}>
+    {{#selectOptions}}
+        {{>option}}
+    {{/selectOptions}}
+</select>
