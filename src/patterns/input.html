@@ -1,0 +1,27 @@
+<input
+    type="{{#inputType}}{{inputType}}{{/inputType}}{{^inputType}}text{{/inputType}}"
+    value="{{inputValue}}"
+    name="{{inputName}}"
+    autocorrect="{{#autocorrect}}on{{/autocorrect}}{{^autocorrect}}off{{/autocorrect}}"
+    {{#autoCapitalize}} autocapitalize="{{autoCapitalize}}"{{/autoCapitalize}}
+    {{#autoComplete}} autocomplete="{{autoComplete}}"{{/autoComplete}}
+    {{#alertError}} aria-invalid="true"{{/alertError}}
+    {{#inputId}} id="{{inputId}}"{{/inputId}}
+    {{#placeholderText}} placeholder="{{placeholderText}}"{{/placeholderText}}
+    {{#pattern}} pattern="{{{pattern}}}"{{/pattern}}
+    {{#patternMessage}} data-patternMessage="{{patternMessage}}"{{/patternMessage}}
+    {{#isPercentage}} min="{{#min}}{{min}}{{/min}}{{^min}}0{{/min}}" max="{{#max}}{{max}}{{/max}}{{^max}}100{{/max}}"{{/isPercentage}}
+    {{^isPercentage}} {{#min}}min="{{min}}"{{/min}} {{#max}}max="{{max}}"{{/max}} {{#step}}step="{{step}}"{{/step}}{{/isPercentage}}
+    {{#disabled}} disabled aria-disabled="true"{{/disabled}}
+    {{#described}} aria-describedby="{{inputName}}-describer"{{/described}}
+    {{^optional}} aria-required="true" required="required"{{/optional}}
+    {{#minlength}} minlength="{{minlength}}"{{/minlength}}
+    {{#inputTarget}} data-target="{{inputTarget}}"{{/inputTarget}}
+    {{#maxlength}} maxlength="{{maxlength}}"{{/maxlength}}
+    {{#readOnly}} aria-readonly="true" readonly="readonly"{{/readOnly}}
+    {{^dateTime}}{{#date}} data-formatdate="true"{{/date}}{{/dateTime}}
+    {{^date}}{{#dateTime}} data-formatdatetime="true"{{/dateTime}}{{/date}}
+    {{#inputType}}{{#multiple}} multiple{{/multiple}}{{/inputType}}
+    {{#serverAccepts}} accept="{{serverAcceptsMimeTypes}}"{{/serverAccepts}}
+>
+{{#isPercentage}}<span>%</span>{{>accessibleRangeDescriptor}}{{/isPercentage}}

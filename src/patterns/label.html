@@ -1,0 +1,21 @@
+<label
+{{#fieldId}} for="{{fieldId}}"{{/fieldId}}
+{{^fieldId}}{{#inputId}} for="{{inputId}}"{{/inputId}}{{/fieldId}}
+{{#inputMultiLabelText}} class="multi{{#uneditable}} uneditable{{/uneditable}}"{{/inputMultiLabelText}}
+{{#labelHidden}} aria-hidden="true"{{/labelHidden}}>
+    {{#labelText}}
+        {{{labelText}}}
+    {{/labelText}}
+    {{#inputMultiLabelText}}
+        {{> inputMulti}}
+        <span>{{{inputMultiLabelText}}}</span>
+    {{/inputMultiLabelText}}
+    {{^inputMultiHeader}}
+        {{#optional}}
+            <em class="tag optional">optional</em>
+        {{/optional}}
+        {{#screenReaderText}}
+            {{>screenReaderText}}
+        {{/screenReaderText}}
+    {{/inputMultiHeader}}
+</label>

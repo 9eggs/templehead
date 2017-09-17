@@ -1,0 +1,8 @@
+<input type="{{#inputType}}{{inputType}}{{/inputType}}{{^inputType}}radio{{/inputType}}"
+       value="{{inputValue}}"
+       name="{{inputName}}"
+       {{#alertError}} aria-invalid="true" {{/alertError}}
+        {{#inputId}} id="{{inputId}}"{{/inputId}}
+        {{#disabled}} disabled aria-disabled="true"{{/disabled}}
+        {{#checked}} checked{{/checked}}
+>
