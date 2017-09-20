@@ -1,5 +1,6 @@
 <a{{#href}} href="{{{href}}}"{{/href}}
     {{#newWindow}} target="_blank"{{/newWindow}}
+    {{#anchorHidden}} aria-hidden="true"{{/anchorHidden}}
     {{^href}}{{#tabindex}} tabindex="{{tabindex}}"{{/tabindex}}{{/href}}>
     {{{anchor}}}{{#newWindow}}<span class="visually-hidden"> (opens in a new window)</span>{{/newWindow}}
 </a>
