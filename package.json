@@ -4,6 +4,7 @@
   "description": "Just HTML templates",
   "main": "index.js",
   "scripts": {
+    "build": "mustache dataView.json myTemplate.mustache > public/output.html",
     "test": "jest"
   },
   "repository": {
@@ -20,7 +21,9 @@
   },
   "homepage": "https://github.com/9eggs/templehead#readme",
   "devDependencies": {
-    "jest-cli": "^21.2.1"
+    "jest-cli": "^21.2.1",
+    "mustache": "^2.3.0",
+    "read-file": "^0.2.0"
   },
   "jest": {
     "testEnvironment": "node"
