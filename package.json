@@ -4,7 +4,7 @@
   "description": "Just HTML templates",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -18,5 +18,11 @@
   "bugs": {
     "url": "https://github.com/9eggs/templehead/issues"
   },
-  "homepage": "https://github.com/9eggs/templehead#readme"
+  "homepage": "https://github.com/9eggs/templehead#readme",
+  "devDependencies": {
+    "jest-cli": "^21.2.1"
+  },
+  "jest": {
+    "testEnvironment": "node"
+  }
 }
